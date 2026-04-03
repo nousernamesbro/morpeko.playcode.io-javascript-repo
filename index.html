@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+  <title>Homepage</title>
+  <!--I think I broke it-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+         <link rel="stylesheet" type="text/css" href="pretty.css" id="theme-stylesheet" />
+  <script src="glow.js"></script>
+  <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/DZnw73Yj/image-(2).webp">
+  </head>
+  <body>
+    <div>
+    <div class="header">
+      <h1 data-text="Hey! Welcome to my site!">Hey! Welcome to my site!</h1>
+      </div>
+        <br><h4>Links</h4>
+        <h4>ll<br>ll<br>ll<br>V</h4>
+        <ul>
+      <div class="glass-panel">
+                <li><button onclick="window.location.href='about.html';">About</li></button>
+        <li><button onclick="window.location.href='password.html';">Password protected</a></button></li>
+        <li><button onclick="window.location.href='updates.html';">Update logs</button></li>
+        <li><button onclick="window.location.href='games.html';">Unblocked games</button></li>
+        <li><button onclick="window.location.href='proxytest.html';">nothing useful</button></li>
+      </ul>
+      </div>
+    <button onclick="window.location.href='test.html';" class="circle"><strong>test<br>.html</strong></button>
+    </div>
+    <!--context menu script-->
+      <script>
+        document.onclick = hideMenu;
+        document.oncontextmenu = rightClick;
+
+        function hideMenu() {
+            document.getElementById(
+                "contextMenu").style.display = "none"
+        }
+
+        function rightClick(e) {
+            e.preventDefault();
+
+            if (document.getElementById(
+                "contextMenu").style.display == "block")
+                hideMenu();
+            else {
+                let menu = document
+                    .getElementById("contextMenu")
+
+                menu.style.display = 'block';
+                menu.style.left = e.pageX + "px";
+                menu.style.top = e.pageY + "px";
+            }
+        }
+    </script>
+
+          <div id="contextMenu" class="context-menu" style="display: none;"><!--context menu div-->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" onclick="history.back(); return false;">Back</a></li>
+            <li><a href="#" onclick="window.history.forward()">Forward</a></li>
+        </ul>
+  </div>
+    <div class="footer">
+         <a href="https://www.playcode.io" class="pc-icon-a"><span class="pc-icon-span"><img src="/playcode-icon-2OYDTWWV.svg" class="pc-icon" alt="playcode icon"/></span></a>
+         <br><br>
+         <br>
+<br><a href="Logs.html"><em><strong>I update this site every once in a while</strong></em></a><br>
+         <br><a href="proxytest.html">nothin useful here</a>
+         </div>
+  </body>
+</head>
